@@ -59,7 +59,7 @@ callButtons.forEach((btn) => {
     coinCountEl.innerText = coinCount;
     alert("Calling " + name + ": " + number);
 
-    // DOM দিয়ে history entry তৈরি
+    
     const entryDiv = document.createElement("div");
     entryDiv.className = "bg-gray-100 p-2 rounded";
 
