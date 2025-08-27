@@ -1,12 +1,11 @@
-  
-
-      
+// Elements
 const heartCountEl = document.getElementById("heartCount");
 const coinCountEl = document.getElementById("coinCount");
 const copyMainBtn = document.getElementById("copyMainBtn");
 const historyList = document.getElementById("historyList");
 const clearHistoryBtn = document.getElementById("clearHistory");
 
+// Counters
 let heartCount = 0;
 let coinCount = 100;
 let copyCount = 0;
@@ -14,30 +13,31 @@ let copyCount = 0;
 // Heart Buttons
 for (let i = 1; i <= 9; i++) {
   const heartBtn = document.getElementById("heart" + i);
-  heartBtn.addEventListener("click", function () {
+  heartBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    heartCount = parseInt(heartCountEl.innerText, 10) || 0;
     heartCount++;
     heartCountEl.innerText = heartCount;
 
     const icon = this.querySelector("i");
-    if (icon.classList.contains("fa-regular")) {
-      icon.classList.remove("fa-regular");
-      icon.classList.add("fa-solid");
-    } else {
-      icon.classList.remove("fa-solid");
-      icon.classList.add("fa-regular");
-    }
+    icon.classList.toggle("fa-regular");
+    icon.classList.toggle("fa-solid");
   });
 }
 
 // Copy Buttons
 const copyButtons = document.querySelectorAll(".copy-btn");
 copyButtons.forEach((btn) => {
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
     const card = this.closest("div.bg-white");
     const number = card.querySelector(".service-number").innerText;
+
     navigator.clipboard.writeText(number);
     alert("Copied " + number);
 
+    copyCount = parseInt(copyMainBtn.innerText, 10) || 0;
     copyCount++;
     copyMainBtn.innerText = copyCount + " Copy";
   });
@@ -46,7 +46,11 @@ copyButtons.forEach((btn) => {
 // Call Buttons
 const callButtons = document.querySelectorAll(".call-btn");
 callButtons.forEach((btn) => {
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    coinCount = parseInt(coinCountEl.innerText, 10) || 0;
+
     if (coinCount < 20) {
       alert("Not enough coins!");
       return;
@@ -55,11 +59,12 @@ callButtons.forEach((btn) => {
     const card = this.closest("div.bg-white");
     const name = card.querySelector(".service-name").innerText;
     const number = card.querySelector(".service-number").innerText;
+
     coinCount -= 20;
     coinCountEl.innerText = coinCount;
     alert("Calling " + name + ": " + number);
 
-    
+    // Add to history
     const entryDiv = document.createElement("div");
     entryDiv.className = "bg-gray-100 p-2 rounded";
 
@@ -90,7 +95,8 @@ callButtons.forEach((btn) => {
 });
 
 // Clear History
-clearHistoryBtn.addEventListener("click", () => {
+clearHistoryBtn.addEventListener("click", function (e) {
+  e.preventDefault();
   historyList.innerHTML = "";
 });
 
