@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Hotline</title>
-    <!-- tailwindcss cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- font-awesome cdn -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -40,10 +37,11 @@
         <button
           id="copyMainBtn"
           class="bg-green-600 text-white px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base">
-          2 Copy
+          0 Copy
         </button>
       </div>
     </nav>
+
 
     <div class="bg-green-50">
       <!-- Header -->
@@ -63,15 +61,16 @@
       <div class="min-h-screen p-6 flex flex-col lg:flex-row gap-6">
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
-          <!-- Card Template -->
-
+          <!-- Card 1 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img
-                src="./assets/emergency.png"
-                alt=""
-                class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img src="./assets/emergency.png" class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart1" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">জাতীয় জরুরি সেবা</h2>
             <p class="text-gray-500">National Emergency</p>
@@ -91,8 +90,13 @@
           <!-- Card 2 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img src="./assets/police.png" class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img src="./assets/police.png" class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart2" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">পুলিশ</h2>
             <p class="text-gray-500">Police</p>
@@ -112,8 +116,15 @@
           <!-- Card 3 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img src="./assets/fire-service.png" class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img
+                  src="./assets/fire-service.png"
+                  class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart3" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">ফায়ার সার্ভিস</h2>
             <p class="text-gray-500">Fire Service</p>
@@ -133,8 +144,13 @@
           <!-- Card 4 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img src="./assets/ambulance.png" class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img src="./assets/ambulance.png" class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart4" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">অ্যাম্বুলেন্স</h2>
             <p class="text-gray-500">Ambulance</p>
@@ -154,8 +170,13 @@
           <!-- Card 5 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img src="./assets/emergency.png" class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img src="./assets/emergency.png" class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart5" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">নারী ও শিশু সহায়তা</h2>
             <p class="text-gray-500">Women & Child Helpline</p>
@@ -175,8 +196,13 @@
           <!-- Card 6 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img src="./assets/emergency.png" class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img src="./assets/emergency.png" class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart6" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">দুদক</h2>
             <p class="text-gray-500">Anti-Corruption</p>
@@ -196,8 +222,13 @@
           <!-- Card 7 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img src="./assets/emergency.png" class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img src="./assets/emergency.png" class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart7" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">বিদ্যুৎ বিভ্রাট</h2>
             <p class="text-gray-500">Electricity Outage</p>
@@ -217,8 +248,13 @@
           <!-- Card 8 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img src="./assets/brac.png" class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img src="./assets/brac.png" class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart8" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">ব্র্যাক</h2>
             <p class="text-gray-500">Brac</p>
@@ -238,10 +274,15 @@
           <!-- Card 9 -->
           <div
             class="bg-white p-4 rounded-xl shadow text-center hover:scale-105 transition-transform">
-            <div class="mb-2">
-              <img
-                src="./assets/Bangladesh-Railway.png"
-                class="w-12 h-12 mx-auto" />
+            <div class="mb-2 flex justify-between items-start">
+              <div>
+                <img
+                  src="./assets/Bangladesh-Railway.png"
+                  class="w-12 h-12 mx-auto" />
+              </div>
+              <button id="heart9" class="text-gray-400 text-xl">
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
             <h2 class="text-lg font-bold service-name">বাংলাদেশ রেলওয়ে</h2>
             <p class="text-gray-500">Bangladesh Railway</p>
@@ -259,13 +300,12 @@
           </div>
         </div>
 
-        <!-- Right: Call History -->
+        <!-- Call History -->
         <div
           class="w-full lg:w-1/4 bg-white p-4 rounded-xl shadow flex-shrink-0">
           <div class="flex justify-between items-center mb-4">
             <h2 class="text-lg font-semibold flex items-center gap-2">
-              <i class="fa-solid fa-clock"></i>
-              Call History
+              <i class="fa-solid fa-clock"></i> Call History
             </h2>
             <button
               id="clearHistory"
@@ -273,13 +313,10 @@
               Clear
             </button>
           </div>
-
-          <div id="historyList" class="space-y-2">
-            <!-- initial example items -->
-          </div>
+          <div id="historyList" class="space-y-2"></div>
         </div>
       </div>
     </div>
-    <script src="./Assignment -5.js"></script>
+    
   </body>
 </html>
